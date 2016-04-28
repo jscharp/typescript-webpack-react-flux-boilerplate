@@ -30,6 +30,7 @@ export default class ContentPage extends SmartComponent<{}, IContentPageState> {
                            <button onClick={() => this.onButtonClick()}>Say Hello!</button>
                            <span> You said hello {this.state.sayHelloCount} time(s)</span>
                        </div>
+                       <button onClick={() => this.showDashboard()}>Show dashboard</button>
                    </ContentBody>
                </div>;
     }
@@ -44,5 +45,9 @@ export default class ContentPage extends SmartComponent<{}, IContentPageState> {
 
     private onButtonClick(): void {
         CommonActionCreators.sayHello();
+    }
+
+    private showDashboard(): void {
+        CommonActionCreators.showDashboard();
     }
 }

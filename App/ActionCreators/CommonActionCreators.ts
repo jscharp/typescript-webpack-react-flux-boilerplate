@@ -1,6 +1,7 @@
 import Dispatcher from "../Dispatcher/Dispatcher";
 import AppLoadedAction from "../Actions/AppLoadedAction";
 import SayHelloAction from "../Actions/SayHelloAction";
+import ShowDashboardAction from "../Actions/ShowDashboardAction";
 
 export function loadApp(): void {
     const bodyTitle: string = "The standard Lorem Ipsum passage, used since the 1500s";
@@ -15,4 +16,8 @@ export function loadApp(): void {
 
 export function sayHello(): void {
         Dispatcher.dispatch(new SayHelloAction());
+}
+
+export function showDashboard(): void {
+    Dispatcher.dispatch(new ShowDashboardAction(2, "Joris"));
 }
