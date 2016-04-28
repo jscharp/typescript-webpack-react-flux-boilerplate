@@ -1,5 +1,4 @@
-/// <reference path="../../../../typings/tsd.d.ts" />
-/// <reference path="../../../../typings/jasmine/jasmine.d.ts" />
+/// <reference path="../../../../typings/main.d.ts" />
 
 import * as React from "react";
 import * as TestUtils  from "react-addons-test-utils";
@@ -14,9 +13,9 @@ describe("ContentPage tests", () => {
         it("renders content page", () => {
             CommonActionCreators.loadApp();
 
-            const component: React.Component<{}, {}> = TestUtils.renderIntoDocument(
+            const component: React.Component<ContentPage, {}> = TestUtils.renderIntoDocument<ContentPage>(
                 <ContentPage />
-            );
+            ) as React.Component<ContentPage, {}>;
 
             const body: ContentBody = component.refs["contentBodyRef"] as ContentBody;
             expect(body).toBeDefined();

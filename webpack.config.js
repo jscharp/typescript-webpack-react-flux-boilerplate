@@ -52,7 +52,7 @@ var config = {
     loaders: [
       // TODO remove crazy require when https://github.com/babel/babel-loader/issues/166 is fixed.
       {
-        test: /\.tsx?$/,
+        test: /\.tsx?$/i,
         loader: 'babel?cacheDirectory,plugins[]=' + require.resolve(path.join(nodeModulesPath, 'babel-plugin-external-helpers-2')) +
                 ',presets[]=' + require.resolve(path.join(nodeModulesPath, 'babel-preset-es2015-loose')) +
                 '!ts-loader?configFileName=tsconfig.webpack.json',

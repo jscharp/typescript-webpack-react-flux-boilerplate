@@ -1,2 +1,7 @@
 node_modules/
 build/
+typings/
+typings/**/*.d.ts
+typings/*.d.ts
+App/**/*.js
+App/**/*.js.map

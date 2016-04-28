@@ -1,9 +1,10 @@
 import * as React from "react";
 import { Link } from "react-router";
 import BaseComponent from "./BaseComponent";
-import {ILinkProps} from "~react-router/react-router";
+import LinkProps = ReactRouter.LinkProps;
+import ClassAttributes = __React.ClassAttributes;
 
-export class NavLink extends BaseComponent<ILinkProps, {}> {
+export class NavLink extends BaseComponent<LinkProps & ClassAttributes<NavLink>, {}> {
 
     doRender(): React.ReactElement<{}> {
         return <Link {...this.props} activeClassName="active"/>;
